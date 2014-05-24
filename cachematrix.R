@@ -1,4 +1,4 @@
-## There are two functions in thsi file - makeCacheMatrix & CacheSolve. makeCacheMatrix creates a "matrix" object and CacheSolve calculates the inverse of the matrix and stores it as part of the "matrix" object createdby makeCacheMatrix. 
+## There are two functions in thsi file - makeCacheMatrix & CacheSolve. makeCacheMatrix creates a "matrix" object and CacheSolve calculates the inverse of the matrix and stores it as part of the "matrix" object created by makeCacheMatrix. 
 
 
 ## Creates a special "matrix" object that can store the matrix data and its inverse.
@@ -39,13 +39,13 @@ makeCacheMatrix <- function(x = matrix()) {
 ## Return a matrix that is the inverse of 'x'
 
 cacheSolve <- function(x, ...) {
-    ## Return a matrix that is the inverse of 'x'
+    ##  Returns the cached inverse of the "matrix" if the inverse value has been set.  Otherwise calculates inverse of the matrix and sets its value in the matrix object.
     # 
     # Args:
     #   x: a special "matrix" object
     #
     # Returns:
-    #   Returns the inverse of the "matrix" if the inverse value has been set.  Otherwise calculates invesre of the matrix and sets its value in the matrix object.
+    #   Returns the inverse of the matrix.
     
     i <- x$getinverse()
     if(!is.null(i)) {
